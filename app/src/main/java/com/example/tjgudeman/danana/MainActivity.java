@@ -15,11 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
         final Button button = (Button) findViewById(R.id.button);
         button.setText("What a play!");
-        button.setAlpha(.8f);
+        button.setAlpha(.9f);
 
         final MediaPlayer mp;
         mp = MediaPlayer.create(this, R.raw.espn);
-
 
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -30,5 +29,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+
+        Button button2 = (Button) findViewById(R.id.button2);
+        final MediaPlayer mp2;
+        button2.setText("You can put in \n on the board");
+        mp2 = MediaPlayer.create(this, R.raw.ontheboard);
+        button2.setAlpha(.9f);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                mp2.start();
+            }
+
+
+        });
+
     }
 }
